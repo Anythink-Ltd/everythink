@@ -920,7 +920,7 @@ export default function NetlifyConnection() {
               </a>
             </div>
             {/* Debug info - remove this later */}
-            <div className="mt-2 text-xs text-gray-500">
+            <div className="mt-2 text-xs text-zinc-500">
               <p>Debug: Token present: {connection.token ? '✅' : '❌'}</p>
               <p>Debug: User present: {connection.user ? '✅' : '❌'}</p>
               <p>Debug: Env token: {import.meta.env?.VITE_NETLIFY_ACCESS_TOKEN ? '✅' : '❌'}</p>

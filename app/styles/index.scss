@@ -15,13 +15,20 @@ body {
 }
 
 :root {
-  --gradient-opacity: 0.8;
-  --primary-color: rgba(158, 117, 240, var(--gradient-opacity));
-  --secondary-color: rgba(138, 43, 226, var(--gradient-opacity));
-  --accent-color: rgba(128, 59, 239, var(--gradient-opacity));
-  // --primary-color: rgba(147, 112, 219, var(--gradient-opacity));
-  // --secondary-color: rgba(138, 43, 226, var(--gradient-opacity));
-  // --accent-color: rgba(180, 170, 220, var(--gradient-opacity));
+  // Light mode - much subtler background
+  --gradient-opacity: 0.08;
+  // Anythink orange color palette: #F97316 (249, 115, 22)
+  --primary-color: rgba(249, 115, 22, var(--gradient-opacity)); // Main Anythink orange
+  --secondary-color: rgba(234, 88, 12, var(--gradient-opacity)); // Darker orange
+  --accent-color: rgba(251, 146, 60, var(--gradient-opacity)); // Lighter orange
+}
+
+.dark {
+  // Dark mode - slightly more visible background
+  --gradient-opacity: 0.25;
+  --primary-color: rgba(249, 115, 22, var(--gradient-opacity));
+  --secondary-color: rgba(234, 88, 12, var(--gradient-opacity));
+  --accent-color: rgba(251, 146, 60, var(--gradient-opacity));
 }
 
 .modern-scrollbar {

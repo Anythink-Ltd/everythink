@@ -35,17 +35,17 @@ const BASE_COLORS = {
     950: '#0A0A0A',
   },
   accent: {
-    50: '#F8F5FF',
-    100: '#F0EBFF',
-    200: '#E1D6FF',
-    300: '#CEBEFF',
-    400: '#B69EFF',
-    500: '#9C7DFF',
-    600: '#8A5FFF',
-    700: '#7645E8',
-    800: '#6234BB',
-    900: '#502D93',
-    950: '#2D1959',
+    50: '#FFFAEB',
+    100: '#FEEFC7',
+    200: '#FEDF89',
+    300: '#FEC84B',
+    400: '#FDB022',
+    500: '#F97316', // Main Anythink orange
+    600: '#EA6C0E', // Darker orange for hover states
+    700: '#DC6803',
+    800: '#B54708',
+    900: '#792E0D',
+    950: '#431407',
   },
   green: {
     50: '#F0FDF4',

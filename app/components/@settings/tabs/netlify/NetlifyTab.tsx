@@ -782,9 +782,9 @@ export default function NetlifyTab() {
                         label: 'Custom Domain',
                         value: customDomain,
                         icon: 'i-ph:globe',
-                        color: 'text-purple-500',
-                        bgColor: 'bg-purple-100 dark:bg-purple-900/20',
-                        textColor: 'text-purple-800 dark:text-purple-400',
+                        color: 'text-orange-500',
+                        bgColor: 'bg-orange-100 dark:bg-orange-900/20',
+                        textColor: 'text-orange-800 dark:text-orange-400',
                       },
                       {
                         label: 'Building',
@@ -1281,7 +1281,7 @@ export default function NetlifyTab() {
             </span>
           </div>
           {connectionTest.timestamp && (
-            <p className="text-xs text-gray-500 mt-1">{new Date(connectionTest.timestamp).toLocaleString()}</p>
+            <p className="text-xs text-zinc-500 mt-1">{new Date(connectionTest.timestamp).toLocaleString()}</p>
           )}
         </motion.div>
       )}

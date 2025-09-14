@@ -7,7 +7,13 @@ import { Header } from '~/components/header/Header';
 import BackgroundRays from '~/components/ui/BackgroundRays';
 
 export const meta: MetaFunction = () => {
-  return [{ title: 'Bolt' }, { name: 'description', content: 'Talk with Bolt, an AI assistant from StackBlitz' }];
+  return [
+    { title: 'Anythink' },
+    {
+      name: 'description',
+      content: 'Anythink - AI-powered full-stack development platform with integrated backend services',
+    },
+  ];
 };
 
 export async function loader(args: LoaderFunctionArgs) {

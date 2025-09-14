@@ -187,7 +187,7 @@ export function FileIcon({ filename, size = 'md', className }: FileIconProps) {
     }
 
     if (['md', 'markdown'].includes(extension)) {
-      return 'text-gray-500';
+      return 'text-zinc-500';
     }
 
     if (['py', 'pyc', 'pyd', 'pyo'].includes(extension)) {
@@ -199,7 +199,7 @@ export function FileIcon({ filename, size = 'md', className }: FileIconProps) {
     }
 
     if (['php'].includes(extension)) {
-      return 'text-purple-500';
+      return 'text-orange-500';
     }
 
     if (['rb', 'ruby'].includes(extension)) {
@@ -223,7 +223,7 @@ export function FileIcon({ filename, size = 'md', className }: FileIconProps) {
     }
 
     if (['kt', 'kotlin'].includes(extension)) {
-      return 'text-purple-400';
+      return 'text-orange-400';
     }
 
     if (['dart'].includes(extension)) {
@@ -232,7 +232,7 @@ export function FileIcon({ filename, size = 'md', className }: FileIconProps) {
 
     // Config files
     if (['yml', 'yaml'].includes(extension)) {
-      return 'text-purple-300';
+      return 'text-orange-300';
     }
 
     if (['xml'].includes(extension)) {
@@ -244,11 +244,11 @@ export function FileIcon({ filename, size = 'md', className }: FileIconProps) {
     }
 
     if (['toml'].includes(extension)) {
-      return 'text-gray-500';
+      return 'text-zinc-500';
     }
 
     if (['ini', 'conf', 'config'].includes(extension)) {
-      return 'text-gray-500';
+      return 'text-zinc-500';
     }
 
     if (['env', 'env.local', 'env.development', 'env.production'].includes(extension)) {
@@ -273,7 +273,7 @@ export function FileIcon({ filename, size = 'md', className }: FileIconProps) {
     }
 
     if (['txt'].includes(extension)) {
-      return 'text-gray-500';
+      return 'text-zinc-500';
     }
 
     // Image files
@@ -309,7 +309,7 @@ export function FileIcon({ filename, size = 'md', className }: FileIconProps) {
     }
 
     if (filename === 'LICENSE') {
-      return 'text-gray-500';
+      return 'text-zinc-500';
     }
 
     if (filename === '.gitignore') {
@@ -321,7 +321,7 @@ export function FileIcon({ filename, size = 'md', className }: FileIconProps) {
     }
 
     // Default
-    return 'text-gray-400';
+    return 'text-zinc-400';
   };
 
   const getSizeClass = (size: 'sm' | 'md' | 'lg'): string => {

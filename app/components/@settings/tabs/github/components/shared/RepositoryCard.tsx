@@ -101,7 +101,7 @@ export function RepositoryCard({
     const isHealthy = daysSinceUpdate < 30 && !repository.archived && repository.stargazers_count > 0;
 
     if (repository.archived) {
-      return 'bg-gray-500';
+      return 'bg-zinc-500';
     }
 
     if (isActive) {
@@ -282,12 +282,12 @@ export function RepositoryCard({
                 </span>
               ))}
             {repository.archived && (
-              <span className="px-2 py-0.5 rounded-full bg-gray-100 text-gray-800 dark:bg-gray-900/20 dark:text-gray-400">
+              <span className="px-2 py-0.5 rounded-full bg-zinc-100 text-zinc-800 dark:bg-zinc-900/20 dark:text-zinc-400">
                 Archived
               </span>
             )}
             {repository.fork && (
-              <span className="px-2 py-0.5 rounded-full bg-purple-100 text-purple-800 dark:bg-purple-900/20 dark:text-purple-400">
+              <span className="px-2 py-0.5 rounded-full bg-orange-100 text-orange-800 dark:bg-orange-900/20 dark:text-orange-400">
                 Fork
               </span>
             )}

@@ -235,7 +235,7 @@ export function DataVisualization({ chats }: DataVisualizationProps) {
         titleColor: chartColors.text,
         bodyColor: chartColors.text,
         backgroundColor: isDarkMode
-          ? 'rgba(23, 23, 23, 0.8)' // Dark bg using Tailwind gray-900
+          ? 'rgba(23, 23, 23, 0.8)' // Dark bg using Tailwind zinc-900
           : 'rgba(255, 255, 255, 0.8)', // Light bg
         borderColor: chartColors.border,
         borderWidth: 1,

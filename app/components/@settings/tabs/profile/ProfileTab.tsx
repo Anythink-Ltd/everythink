@@ -69,13 +69,13 @@ export default function ProfileTab() {
             <div
               className={classNames(
                 'w-24 h-24 rounded-full overflow-hidden',
-                'bg-gray-100 dark:bg-gray-800/50',
+                'bg-zinc-100 dark:bg-zinc-800/50',
                 'flex items-center justify-center',
-                'ring-1 ring-gray-200 dark:ring-gray-700',
+                'ring-1 ring-zinc-200 dark:ring-zinc-700',
                 'relative group',
                 'transition-all duration-300 ease-out',
-                'hover:ring-purple-500/30 dark:hover:ring-purple-500/30',
-                'hover:shadow-lg hover:shadow-purple-500/10',
+                'hover:ring-orange-500/30 dark:hover:ring-orange-500/30',
+                'hover:shadow-lg hover:shadow-orange-500/10',
               )}
             >
               {profile.avatar ? (
@@ -89,7 +89,7 @@ export default function ProfileTab() {
                   )}
                 />
               ) : (
-                <div className="i-ph:robot-fill w-16 h-16 text-gray-400 dark:text-gray-500 transition-colors group-hover:text-purple-500/70 transform -translate-y-1" />
+                <div className="i-ph:robot-fill w-16 h-16 text-zinc-400 dark:text-zinc-500 transition-colors group-hover:text-orange-500/70 transform -translate-y-1" />
               )}
 
               <label
@@ -117,19 +117,19 @@ export default function ProfileTab() {
             </div>
 
             <div className="flex-1 pt-1">
-              <label className="block text-base font-medium text-gray-900 dark:text-gray-100 mb-1">
+              <label className="block text-base font-medium text-zinc-900 dark:text-zinc-100 mb-1">
                 Profile Picture
               </label>
-              <p className="text-sm text-gray-500 dark:text-gray-400">Upload a profile picture or avatar</p>
+              <p className="text-sm text-zinc-500 dark:text-zinc-400">Upload a profile picture or avatar</p>
             </div>
           </div>
 
           {/* Username Input */}
           <div className="mb-6">
-            <label className="block text-sm font-medium text-gray-900 dark:text-gray-100 mb-2">Username</label>
+            <label className="block text-sm font-medium text-zinc-900 dark:text-zinc-100 mb-2">Username</label>
             <div className="relative group">
               <div className="absolute left-3.5 top-1/2 -translate-y-1/2">
-                <div className="i-ph:user-circle-fill w-5 h-5 text-gray-400 dark:text-gray-500 transition-colors group-focus-within:text-purple-500" />
+                <div className="i-ph:user-circle-fill w-5 h-5 text-zinc-400 dark:text-zinc-500 transition-colors group-focus-within:text-orange-500" />
               </div>
               <input
                 type="text"
@@ -137,11 +137,11 @@ export default function ProfileTab() {
                 onChange={(e) => handleProfileUpdate('username', e.target.value)}
                 className={classNames(
                   'w-full pl-11 pr-4 py-2.5 rounded-xl',
-                  'bg-white dark:bg-gray-800/50',
-                  'border border-gray-200 dark:border-gray-700/50',
-                  'text-gray-900 dark:text-white',
-                  'placeholder-gray-400 dark:placeholder-gray-500',
-                  'focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50',
+                  'bg-white dark:bg-zinc-800/50',
+                  'border border-zinc-200 dark:border-zinc-700/50',
+                  'text-zinc-900 dark:text-white',
+                  'placeholder-zinc-400 dark:placeholder-zinc-500',
+                  'focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500/50',
                   'transition-all duration-300 ease-out',
                 )}
                 placeholder="Enter your username"
@@ -151,21 +151,21 @@ export default function ProfileTab() {
 
           {/* Bio Input */}
           <div className="mb-8">
-            <label className="block text-sm font-medium text-gray-900 dark:text-gray-100 mb-2">Bio</label>
+            <label className="block text-sm font-medium text-zinc-900 dark:text-zinc-100 mb-2">Bio</label>
             <div className="relative group">
               <div className="absolute left-3.5 top-3">
-                <div className="i-ph:text-aa w-5 h-5 text-gray-400 dark:text-gray-500 transition-colors group-focus-within:text-purple-500" />
+                <div className="i-ph:text-aa w-5 h-5 text-zinc-400 dark:text-zinc-500 transition-colors group-focus-within:text-orange-500" />
               </div>
               <textarea
                 value={profile.bio}
                 onChange={(e) => handleProfileUpdate('bio', e.target.value)}
                 className={classNames(
                   'w-full pl-11 pr-4 py-2.5 rounded-xl',
-                  'bg-white dark:bg-gray-800/50',
-                  'border border-gray-200 dark:border-gray-700/50',
-                  'text-gray-900 dark:text-white',
-                  'placeholder-gray-400 dark:placeholder-gray-500',
-                  'focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50',
+                  'bg-white dark:bg-zinc-800/50',
+                  'border border-zinc-200 dark:border-zinc-700/50',
+                  'text-zinc-900 dark:text-white',
+                  'placeholder-zinc-400 dark:placeholder-zinc-500',
+                  'focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500/50',
                   'transition-all duration-300 ease-out',
                   'resize-none',
                   'h-32',
