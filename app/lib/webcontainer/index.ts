@@ -24,7 +24,7 @@ if (!import.meta.env.SSR) {
     Promise.resolve()
       .then(() => {
         return WebContainer.boot({
-          coep: 'credentialless',
+          coep: 'none', // Changed from 'credentialless' to allow iframe embedding
           workdirName: WORK_DIR_NAME,
           forwardPreviewErrors: true, // Enable error forwarding from iframes
         });

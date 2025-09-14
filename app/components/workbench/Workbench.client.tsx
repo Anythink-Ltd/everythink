@@ -20,6 +20,7 @@ import { cubicEasingFn } from '~/utils/easings';
 import { renderLogger } from '~/utils/logger';
 import { EditorPanel } from './EditorPanel';
 import { Preview } from './Preview';
+import { AnythinkDashboard } from './AnythinkDashboard';
 import useViewport from '~/lib/hooks';
 
 import { usePreviewStore } from '~/lib/stores/previews';
@@ -54,6 +55,10 @@ const sliderOptions: SliderOptions<WorkbenchViewType> = {
   right: {
     value: 'preview',
     text: 'Preview',
+  },
+  far: {
+    value: 'anythink-dashboard',
+    text: 'Dashboard',
   },
 };
 
@@ -284,6 +289,9 @@ export const Workbench = memo(
     const unsavedFiles = useStore(workbenchStore.unsavedFiles);
     const files = useStore(workbenchStore.files);
     const selectedView = useStore(workbenchStore.currentView);
+    
+    // Debug: Log the current view to see what's happening
+    console.log('Current selectedView:', selectedView);
     const { showChat } = useStore(chatStore);
     const canHideChat = showWorkbench || !showChat;
 
@@ -297,10 +305,11 @@ export const Workbench = memo(
     };
 
     useEffect(() => {
-      if (hasPreview) {
+      // Only auto-switch to preview if we're currently on code view and no manual selection has been made
+      if (hasPreview && selectedView === 'code') {
         setSelectedView('preview');
       }
-    }, [hasPreview]);
+    }, [hasPreview, selectedView]);
 
     useEffect(() => {
       workbenchStore.setDocuments(files);
@@ -466,6 +475,20 @@ export const Workbench = memo(
                 </View>
                 <View initial={{ x: '100%' }} animate={{ x: selectedView === 'preview' ? '0%' : '100%' }}>
                   <Preview setSelectedElement={setSelectedElement} />
+                </View>
+                <View 
+                  initial={{ x: '100%' }} 
+                  animate={{ 
+                    x: selectedView === 'anythink-dashboard' ? '0%' : '100%',
+                    display: selectedView === 'anythink-dashboard' ? 'block' : 'none'
+                  }}
+                  style={{ 
+                    zIndex: selectedView === 'anythink-dashboard' ? 10 : 1,
+                    visibility: selectedView === 'anythink-dashboard' ? 'visible' : 'hidden',
+                    pointerEvents: selectedView === 'anythink-dashboard' ? 'auto' : 'none',
+                  }}
+                >
+                  <AnythinkDashboard setSelectedElement={setSelectedElement} />
                 </View>
               </div>
             </div>
